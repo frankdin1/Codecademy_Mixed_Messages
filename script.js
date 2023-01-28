@@ -99,9 +99,109 @@ let famousMovieLines = [
     'It was beauty that killed the beast.'
 ]
 
-let actorIndex = Math.floor(Math.random() * actors.length)
-let movieIndex = Math.floor(Math.random() * movies.length)
-let movieLinesindex = Math.floor(Math.random() * famousMovieLines.length)
+let singers = [
+    'Beyonce',
+    'Usher',
+    'Alicia Keys',
+    'Tank',
+    'Whitney Houston',
+    'Jennifer Hudson',
+    'Jazmin Sullivan',
+    'Sade',
+    'Rihanna',
+    'Brick and Lace',
+    'P-Square',
+    'Locko',
+    'R. Kelly',
+    'Tyrese Gibson',
+    'Chris Brown',
+    'Brymo',
+    'Fella A. Kuti',
+    'Kotto Bass',
+    'Longue Longue',
+    'Angelique Kidjo',
+    'Kelly Rowland',
+    'Singuila',
+    'Fally Ipupa',
+    'Cysoul',
+    'Masego',
+    'Normani',
+    'Coco Jones',
+    'Lucky Daye',
+    'Kevin Ross',
+    'Victoria Monet',
+    'Kehlani',
+    'SiR',
+    'Tiana Major9',
+    'EARTHGANG'
+]
+
+let songs = [
+    'Caliber',
+    'Thong Songs',
+    'A Long Walk',
+    'Bag Lady',
+    'Izzo',
+    'Bootylicious',
+    'Get Busy',
+    'Crazy in Love',
+    'What We Do',
+    'Hey Ya',
+    'Survivor',
+    'Milkshake',
+    'Drop it Like It\'s Hot',
+    'Yeah!',
+    'Knuck If You Buck',
+    'A Woman\'s Worth',
+    'Noone',
+    'You Don\'t Have To Call',
+    'More Than A Woman',
+    'Right Here With Me',
+    'No Chaser',
+    'Rehab',
+    'Pon De Replay',
+    'Homecoming',
+    'We Belong Together',
+    'Yo (Excuse Me Miss)',
+    'Run It',
+    'Wipe Me Down',
+    'crank That',
+    'Say My Name',
+    'Killing Me Softly With His Song',
+    'Fantasy',
+    'End Of The Road',
+    'If I Ain\'t Got You',
+    'All My Life'
+]
+
+let chorusFirstLine = [
+    'I can feel your halo',
+    'Billie Jean is not my lover',
+    'Just beat it, beat it, beat it, beat it',
+    'I look to you',
+    'We\'re just ordinary people',
+    'How do you heal a broken heart',
+    'Girl you know I, girl you know I, I been feelin\'',
+    'Listen, I am alone at a crossroads',
+    'And no one, no one, no one',
+    'Who you are, who you are, who you are',
+    'You\'re just like poison',
+    'I don\'t wanna be without you babe',
+    'You had me at hello',
+    'If you liked it then you should have put a ring on it',
+    'I\'m scared of lonely',
+    'I wish you\'d hold me in your arms',
+    'What are you thinking?',
+    'See baby we\'ve been too strong for too long'
+]
+
+function createIndex(arr){
+    return Math.floor(Math.random() * arr.length)
+}
+
+let actorIndex = createIndex(actors)
+let movieIndex = createIndex(movies)
+let movieLinesindex = createIndex(famousMovieLines)
 let actor = actors[actorIndex]
 let movie = movies[movieIndex]
 let movieLine = famousMovieLines[movieLinesindex]
