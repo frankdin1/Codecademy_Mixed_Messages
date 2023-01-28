@@ -199,11 +199,32 @@ function createIndex(arr){
     return Math.floor(Math.random() * arr.length)
 }
 
-let actorIndex = createIndex(actors)
-let movieIndex = createIndex(movies)
-let movieLinesindex = createIndex(famousMovieLines)
-let actor = actors[actorIndex]
-let movie = movies[movieIndex]
-let movieLine = famousMovieLines[movieLinesindex]
+function movieMixedMessages(){
+    let actorIndex = createIndex(actors)
+    let movieIndex = createIndex(movies)
+    let movieLinesindex = createIndex(famousMovieLines)
+    let actor = actors[actorIndex]
+    let movie = movies[movieIndex]
+    let movieLine = famousMovieLines[movieLinesindex]
+    console.log(`\n${actor} was in the movie, ${movie}, and said the line \"${movieLine}\"`)
+}
 
-console.log(`${actor} was in ${movie}, and said \"${movieLine}\"`)
+function musicMixedMessages(){
+    let singerIndex = createIndex(singers)
+    let songIndex = createIndex(songs)
+    let chorusIndex = createIndex(chorusFirstLine)
+    let singer = singers[singerIndex]
+    let song = songs[chorusIndex]
+    let chorusLine = chorusFirstLine[chorusIndex]
+    console.log(`\n${singer} released the song, ${song}, and the first line of the chorus was "${chorusLine}"`)
+}
+
+const prompt = require('prompt-sync')()
+let category = prompt("Which category do you choose? Movies or Music: ")
+category = category.toLowerCase()
+if (category === 'movies'){
+    movieMixedMessages()
+}
+else if (category === 'music'){
+    musicMixedMessages()
+}
