@@ -5,7 +5,7 @@
 // const name = prompt("Whats's your name")
 // console.log(`Your name is ${name}`)
 
-let actorArr = [
+let actors = [
 'Denzel Washington', 
 'Viola Davis', 
 'Forest Whitaker', 
@@ -35,7 +35,7 @@ let actorArr = [
 'Nia Long'
 ]
 
-let movieArr = [
+let movies = [
     'The Lord of The Rings',
     'Batman Begins',
     'Superfly',
@@ -66,7 +66,7 @@ let movieArr = [
     'Star Wars'
 ]
 
-let famousMovieLinesArr = [
+let famousMovieLines = [
     'May the Force be with you.',
     'There\'s no place like home.',
     "I\'m the king of the world!",
@@ -98,3 +98,12 @@ let famousMovieLinesArr = [
     'Bond, James Bond.',
     'It was beauty that killed the beast.'
 ]
+
+let actorIndex = Math.floor(Math.random() * actors.length)
+let movieIndex = Math.floor(Math.random() * movies.length)
+let movieLinesindex = Math.floor(Math.random() * famousMovieLines.length)
+let actor = actors[actorIndex]
+let movie = movies[movieIndex]
+let movieLine = famousMovieLines[movieLinesindex]
+
+console.log(`${actor} was in ${movie}, and said \"${movieLine}\"`)
