@@ -1,1 +1,2 @@
 This is a Codecademy project which involves creating a program that displays a different message every time the program is run. I decided to focus the program on movies and music. Every time the program is run, the user is given a choice as to which category they want the messages to be in. After they make their choice, the message is displayed in that category. 
+In order to make the program run as it should, you should have node.js and you should also download prompt-sync.
